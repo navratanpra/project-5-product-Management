@@ -21,7 +21,7 @@ app.use('/', route);
 
 // USING THIS FUNCTION TO HANDLE INVALID ENDPOINTS BY USERS
 route.all("/*", function (req, res) {
-    res.status(400).send({
+    res.status(404).send({
         status: false,
         msg: "URL NOT FOUND!"
     })

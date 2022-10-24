@@ -41,7 +41,7 @@ const createProduct = async (req, res) => {
             // console.log(uploadedFileURL)
             productImage = uploadedFileURL;
         } else {
-            return res.status(400).send({ message: "No file found" });
+            return res.status(404).send({ message: "No file found" });
         }
 
         if (!productImage) {
